@@ -11,12 +11,42 @@ const CVPage = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="max-w-3xl"
+            className="flex flex-col md:flex-row items-center gap-8"
           >
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Curriculum Vitae</h1>
-            <p className="text-xl text-white/80">
-              Multimedia Designer & Content Creator
-            </p>
+            {/* Profile Image */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+              className="w-48 h-48 rounded-full overflow-hidden border-4 border-white/20 shadow-xl"
+            >
+              <img
+                src="https://i.imgur.com/dKHsWNQ.png"
+                alt="Pandu Tirta Buana"
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
+
+            <div>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">Pandu Tirta Buana</h1>
+              <p className="text-xl text-white/80 mb-4">Multimedia Designer & Content Creator</p>
+              
+              {/* Contact Info in Hero */}
+              <div className="flex flex-col gap-2 text-white/80">
+                <div className="flex items-center gap-2">
+                  <MapPin className="w-4 h-4" />
+                  <span>Gunung Kidul, DI Yogyakarta</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Phone className="w-4 h-4" />
+                  <span>0877-3778-3462</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Mail className="w-4 h-4" />
+                  <span>pandutirta25@gmail.com</span>
+                </div>
+              </div>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -168,66 +198,40 @@ const CVPage = () => {
               </div>
             </div>
 
-            {/* Languages & Contact */}
-            <div className="p-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-              >
-                <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
-                  <Globe2 className="w-5 h-5 text-indigo-600" />
-                  Languages
-                </h2>
-                <div className="space-y-3">
-                  <div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-700">Indonesian</span>
-                      <span className="text-indigo-600">Native</span>
-                    </div>
-                  </div>
-                  <div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-700">English</span>
-                      <span className="text-indigo-600">Intermediate</span>
-                    </div>
+            {/* Languages Section */}
+            <div className="p-8">
+              <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
+                <Globe2 className="w-5 h-5 text-indigo-600" />
+                Languages
+              </h2>
+              <div className="space-y-3">
+                <div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-700">Indonesian</span>
+                    <span className="text-indigo-600">Native</span>
                   </div>
                 </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-              >
-                <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
-                  <Users className="w-5 h-5 text-indigo-600" />
-                  Contact Information
-                </h2>
-                <div className="space-y-3 text-gray-700">
-                  <div className="flex items-center gap-2">
-                    <MapPin className="w-4 h-4 text-indigo-600" />
-                    <span>Gunung Kidul, DI Yogyakarta</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Phone className="w-4 h-4 text-indigo-600" />
-                    <span>0877-3778-3462</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Mail className="w-4 h-4 text-indigo-600" />
-                    <span>pandutirta25@gmail.com</span>
+                <div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-700">English</span>
+                    <span className="text-indigo-600">Intermediate</span>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
 
           {/* Download CV Button */}
           <div className="mt-8 text-center">
-            <button className="btn-primary inline-flex items-center gap-2">
+            <a 
+              href="https://www.mediafire.com/file/o0b707j34c2dc3v/CV_Pandu.pdf/file"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary inline-flex items-center gap-2"
+            >
               <Download className="w-5 h-5" />
               Download CV
-            </button>
+            </a>
           </div>
         </div>
       </section>
