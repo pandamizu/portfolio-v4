@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Outlet, NavLink, Link, useLocation } from 'react-router-dom';
-import { Menu, X, Layers, Package, Film, Mail } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import Footer from './Footer';
 
 const Layout = () => {
@@ -24,6 +24,7 @@ const Layout = () => {
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'Portfolio', path: '/portfolio' },
+    { name: 'CV', path: '/cv' },
     { name: 'Contact', path: '/contact' },
   ];
 
