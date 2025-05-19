@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Mail, Phone, Instagram, Twitter, Youtube, Link as LinkIcon, MessageSquare, Copy, Linkedin, Behance } from 'lucide-react';
+import { Mail, Phone, Instagram, Twitter, Youtube, Link as LinkIcon, MessageSquare, Copy, Linkedin, Bean as Behance } from 'lucide-react';
 import { useState } from 'react';
 
 const ContactPage = () => {
