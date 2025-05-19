@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Mail, Phone, Instagram, Twitter, Youtube, Link as LinkIcon, MessageSquare, Copy } from 'lucide-react';
+import { Mail, Phone, Instagram, Twitter, Youtube, Link as LinkIcon, MessageSquare, Copy, Linkedin, Behance } from 'lucide-react';
 import { useState } from 'react';
 
 const ContactPage = () => {
@@ -104,7 +104,7 @@ const ContactPage = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                   <a 
                     href="https://www.instagram.com/pandapediahome"
-                    target="_blank"
+                    target="_blank" 
                     rel="noopener noreferrer"
                     className="flex items-center p-4 bg-white/10 rounded-xl hover:bg-white/20 transition-colors"
                   >
@@ -112,6 +112,30 @@ const ContactPage = () => {
                       <Instagram className="h-5 w-5 text-white" />
                     </div>
                     <span className="text-white">Instagram</span>
+                  </a>
+
+                  <a 
+                    href="https://www.linkedin.com/in/pandu-tirta-buana/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center p-4 bg-white/10 rounded-xl hover:bg-white/20 transition-colors"
+                  >
+                    <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center mr-3">
+                      <Linkedin className="h-5 w-5 text-white" />
+                    </div>
+                    <span className="text-white">LinkedIn</span>
+                  </a>
+
+                  <a 
+                    href="https://www.behance.net/koalagraphic"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center p-4 bg-white/10 rounded-xl hover:bg-white/20 transition-colors"
+                  >
+                    <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center mr-3">
+                      <Behance className="h-5 w-5 text-white" />
+                    </div>
+                    <span className="text-white">Behance</span>
                   </a>
 
                   <a 
