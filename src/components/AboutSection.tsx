@@ -29,7 +29,7 @@ const AboutSection = () => {
     <section id="about" className="py-20 bg-white">
       <div className="section-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Existing motion divs for main content */}
+          {/* About content */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -39,23 +39,26 @@ const AboutSection = () => {
             <span className="text-sm font-medium text-indigo-600 tracking-wider uppercase">
               About Me
             </span>
-            <h2 className="mt-2 text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="mt-2 text-3xl md:text-4xl font-bold mb-8">
               Bringing creative ideas to life digitally
             </h2>
-            <p className="text-gray-600 mb-6 text-lg">
-              I’m a multidisciplinary designer focusing on 3D product modeling, video editing, and graphic design. 
-              I combine creativity and technical skills to produce engaging visual content that connects with audiences.
-            </p>
-            <p className="text-gray-600 mb-6">
-              I work with industry-standard tools like Blender for 3D modeling and animation, Adobe Premiere Pro
-              for video editing, Adobe Illustrator for graphic design, and Adobe Photoshop for image editing.
-            </p>
-            <p className="text-gray-600">
-              My design approach is about crafting clear, attractive visuals, especially for social media and
-              digital platforms, leveraging inspiration from various sources including AI and online references.
-            </p>
+            <div className="space-y-6">
+              <p className="text-gray-700 leading-relaxed">
+                I'm a multidisciplinary designer focusing on 3D product modeling, video editing, and graphic design. 
+                I combine creativity and technical skills to produce engaging visual content that connects with audiences.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                I work with industry-standard tools like Blender for 3D modeling and animation, Adobe Premiere Pro
+                for video editing, Adobe Illustrator for graphic design, and Adobe Photoshop for image editing.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                My design approach is about crafting clear, attractive visuals, especially for social media and
+                digital platforms, leveraging inspiration from various sources including AI and online references.
+              </p>
+            </div>
           </motion.div>
           
+          {/* Skills grid */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -78,21 +81,22 @@ const AboutSection = () => {
                   <div className="mb-4 p-2 bg-indigo-50 inline-block rounded-lg">
                     {skill.icon}
                   </div>
-                  <h3 className="text-lg font-semibold mb-2">{skill.name}</h3>
-                  <p className="text-gray-600">{skill.description}</p>
+                  <h3 className="text-lg font-semibold mb-3">{skill.name}</h3>
+                  <p className="text-gray-600 leading-relaxed text-sm">{skill.description}</p>
                 </motion.div>
               ))}
             </div>
           </motion.div>
         </div>
         
-        <div className="mt-16 pt-16 border-t border-gray-100">
+        {/* Tools section */}
+        <div className="mt-20 pt-16 border-t border-gray-100">
           <motion.h3
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-xl font-semibold text-center mb-8"
+            className="text-2xl font-semibold text-center mb-12"
           >
             Tools I Use
           </motion.h3>
@@ -132,9 +136,9 @@ const AboutSection = () => {
                   transition={{ type: "spring", stiffness: 300, damping: 15 }}
                   src={tool.src}
                   alt={tool.name}
-                  className="h-12 w-12 mb-2 object-contain"
+                  className="h-12 w-12 mb-3 object-contain"
                 />
-                <span className="text-gray-700">{tool.name}</span>
+                <span className="text-gray-700 font-medium">{tool.name}</span>
               </motion.div>
             ))}
           </motion.div>
